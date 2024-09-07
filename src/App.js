@@ -3,44 +3,14 @@ import './App.css';
 import Componente1 from './Componente1';
 import 'bootstrap/dist/css/bootstrap.css';
 import Product from './Product';
+import Products from './products';
 
-const Products = [
-  {
-    prezzo: "10,00",
-    nome: "PROMAVERIX",
-    image: "https://th.bing.com/th/id/R.4fa63f127ec1a820b0c95ceb1f88a015?rik=E4mb48miX5RBHQ&pid=ImgRaw&r=0",
-  },
-  {
-    prezzo: "15,00",
-    nome: "MENO-15",
-    image: "https://th.bing.com/th/id/OIP.V761uo8rBp5wlJn9PgoxjAAAAA?rs=1&pid=ImgDetMain",
-  },
-  {
-    prezzo: "10,00",
-    nome: "PROMAVERIX",
-    image: "https://th.bing.com/th/id/R.4fa63f127ec1a820b0c95ceb1f88a015?rik=E4mb48miX5RBHQ&pid=ImgRaw&r=0",
-  },
-  {
-    prezzo: "15,00",
-    nome: "MENO-15",
-    image: "https://th.bing.com/th/id/OIP.V761uo8rBp5wlJn9PgoxjAAAAA?rs=1&pid=ImgDetMain",
-  },
-    {
-    prezzo: "10,00",
-    nome: "PROMAVERIX",
-    image: "https://th.bing.com/th/id/R.4fa63f127ec1a820b0c95ceb1f88a015?rik=E4mb48miX5RBHQ&pid=ImgRaw&r=0",
-  },
-  {
-    prezzo: "15,00",
-    nome: "MENO-15",
-    image: "https://th.bing.com/th/id/OIP.V761uo8rBp5wlJn9PgoxjAAAAA?rs=1&pid=ImgDetMain",
-  }
-];
 
 function App() {
 
-  const PrdocutList = Products.map((productElem) => {
-    return <Product {...productElem}></Product>;
+  const PrdocutList = Products.map((prodotto) => {
+    const {id} = prodotto;
+    return <Product key = {id} {...prodotto}></Product>;
   });
 
   return (

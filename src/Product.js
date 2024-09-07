@@ -8,6 +8,10 @@ const myStyle = {
   margin: 'auto',
 };
 
+const handleClick = () =>{
+  console.log('Nel carrello');
+};
+
 const Product = ({image, nome, prezzo, childern}) => {
   return (
     <article className="col-md-3 mb-4">
@@ -19,7 +23,7 @@ const Product = ({image, nome, prezzo, childern}) => {
           <p className='p-2 '>{childern}</p>
           <div className="d-flex justify-content-between align-items-center">
             <span className="text-muted">{prezzo} €</span>
-            <button className="btn btn-primary">Acquista</button>
+            <button className="btn btn-primary" onClick={()=>alert(` ${nome} Aggiunto nel carrello!`)}>Acquista</button>
           </div>
         </div>
       </div>
